@@ -5,8 +5,6 @@ $(document).ready(function(){
     
     var path = window.location.pathname;
     var page = path.split("/").pop();
-    console.log("Path: " + path);
-    console.log("Page: "+ page);
     var moving = false;
     var count = 0;
     var pages = [
@@ -34,8 +32,8 @@ $(document).ready(function(){
         moving = true;
         var cElem = arr[count];
         var nElem = arr[next];
-        $('.'+cElem).fadeOut(500);
-        $('.'+nElem).fadeIn(700);
+        $('#'+cElem).fadeOut(500);
+        $('#'+nElem).fadeIn(700);
         $('html, body').animate({
                 scrollTop: 0
         }, 1000);
