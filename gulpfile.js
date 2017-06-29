@@ -32,8 +32,8 @@ gulp.task('html', function(){
 // });
 
 gulp.task('watch', function(){
-	gulp.watch('source/sass/*.sass', ['css']);
-	gulp.watch('source/pug/*.pug', ['html']);
+	gulp.watch('src/sass/*.sass', ['css']);
+	gulp.watch('src/pug/*.pug', ['html']);
 });
 
 // gulp.task('default', ['html', 'css', 'js']);

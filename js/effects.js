@@ -41,6 +41,10 @@ $(document).ready(function(){
         count = next;
     }
     // TODO: contents onclick, change count value
+    $("a").on("click", function(){
+        var href = $(this).attr('href').substr(1);
+        changePage(thisList, thisList.indexOf(href));
+    });
     // case switch statements
 
     // TODO: have a see all section
