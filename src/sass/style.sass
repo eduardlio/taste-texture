@@ -33,17 +33,18 @@ h2
 a, a:visited, a:active,
     color: #666
     text-decoration: none
-    transition: all .1s ease-in-out
-a:hover
-    color: #222
+    transition: all .2s ease-in-out
+a:hover:not(.hvr-underline-from-left)
+    background-color: #FF8FC7
+    color: #000
 .content
     width: 80%
     margin: 0 auto
+    min-height: 100vh
 .contents
     display: flex
     align-items: center
     justify-content: center
-            
             
 .head
     text-align: center
@@ -52,7 +53,7 @@ a:hover
     width: 70%
     margin: 0 auto
     display: none
-#intro, #terms, #foreword, #display
+#intro, #terms, #foreword, #display, #me
     display: block
 .pagin
     width: 100%
