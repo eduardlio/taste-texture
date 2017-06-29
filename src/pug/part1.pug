@@ -5,6 +5,7 @@ head
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="styles/style.css")
+    link(rel="stylesheet", href="styles/hover.css")
     title Taste and Texture Part 1
 body
     .content
@@ -15,22 +16,21 @@ body
         .contents
             ul
                 li 
-                    a(href="part2.html") Part 2
+                    a(href="part2.html").hvr-underline-from-left Part 2
                 li 
-                    a(href="#terms") Terms and Definitions
+                    a(href="#terms").hvr-underline-from-left Terms and Definitions
                 li 
-                    a(href="#big-four") The Big Four (or five?)
+                    a(href="#big-four").hvr-underline-from-left The Big Four (or five?)
                 li 
-                    a(href="#four-tastes") Four Tastes in Combination
+                    a(href="#four-tastes").hvr-underline-from-left Four Tastes in Combination
                 li 
-                    a(href="#other-flavs") Other Flavor Categories
+                    a(href="#other-flavs").hvr-underline-from-left Other Flavor Categories
                 li 
-                    a(href="#flav-beyond") Flavor &amp; Beyond
+                    a(href="#flav-beyond").hvr-underline-from-left Flavor &amp; Beyond
                 li 
-                    a(href="#experiments") Experiments
-
+                    a(href="#experiments").hvr-underline-from-left Experiments
                 li  
-                    a(href="index.html") Back to the home page thing
+                    a(href="index.html").hvr-underline-from-left Back to the home page thing
         .main#terms
             include extracts/part1/terms/01terms.pug
             include extracts/part1/terms/02tsf.pug

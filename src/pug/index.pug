@@ -5,6 +5,7 @@ head
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
     meta(http-equiv="X-UA-Compatible", content="ie=edge")
     link(rel="stylesheet", href="styles/style.css")
+    link(rel="stylesheet", href="styles/hover.css")
     title Texture and Tasting
 body
     .content
@@ -13,9 +14,9 @@ body
         .contents
             ul
                 li 
-                    a(href="part1.html") Part 1
+                    a(href="part1.html").hvr-underline-from-left Part 1
                 li 
-                    a(href="part2.html") Part 2
+                    a(href="part2.html").hvr-underline-from-left Part 2
         .main#foreword
             h2 A foreword from me
             p 
@@ -30,8 +31,8 @@ body
         .main#display
             h2 Enter the posts
             .parts.part1
-                h3 
+                h3.hvr-underline-from-left 
                     a(href="part1.html") View Part 1 here
             .parts.part2
-                h3 
+                h3.hvr-underline-from-left
                     a(href="part2.html") View Part 2 here
