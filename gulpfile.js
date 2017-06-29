@@ -1,10 +1,11 @@
 var gulp = require('gulp');
 var autoprefixer = require('gulp-autoprefixer');
 var cleanCSS = require('gulp-clean-css');
-// var concat = require('gulp-concat');
+var concat = require('gulp-concat');
 var pug = require('gulp-pug');
 var sass = require('gulp-sass');
-// var uglify = require('gulp-uglify');
+var uglify = require('gulp-uglify');
+var gutil = require('gulp-util');
 // var rename = require('gulp-rename');
 
 gulp.task('css', function(){
@@ -23,12 +24,15 @@ gulp.task('html', function(){
 
 // gulp.task('js', function(){
 // 	gulp.src([
-// 		'bower_components/jquery/dist/jquery.js',
-// 		'bower_components/modernizr/src/modernizr.js'
+// 		// 'bower_components/modernizr/modernizr.js',
+// 		'js/effects.js',
+// 		'js/analytics.js'
 // 		])
+// 		// .on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
 // 		.pipe(concat('output.min.js'))
 // 		.pipe(uglify())
-// 		.pipe(gulp.dest('build/js'))
+// 		.on('error', function (err) { gutil.log(gutil.colors.red('[Error]'), err.toString()); })
+// 		.pipe(gulp.dest('js'))
 // });
 
 gulp.task('watch', function(){
