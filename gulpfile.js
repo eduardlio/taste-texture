@@ -18,7 +18,7 @@ gulp.task('css', function(){
 gulp.task('html', function(){
 	gulp.src('src/pug/*.pug')
 		.pipe(pug({pretty: true}))
-		.pipe(gulp.dest(''))
+		.pipe(gulp.dest('./'))
 });
 
 // gulp.task('js', function(){

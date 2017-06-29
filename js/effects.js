@@ -2,37 +2,46 @@ $(document).ready(function(){
     $('html, body').animate({
         scrollTop: 0
     });
+    
+    var path = window.location.pathname;
+    var page = path.split("/").pop();
+    console.log("Path: " + path);
+    console.log("Page: "+ page);
     var moving = false;
     var count = 0;
-    var pages = ['intro', 'cat', 'chem', 'mouth','tt', 'step', 'exp'];
+    var pages = [
+        ['terms', 'big-four', 'four-tastes', 'other-flavs', 'flav-beyond', 'experiments'],
+        ['intro', 'cat', 'chem', 'mouth','tt', 'step', 'exp']
+    ];
+    var thisList = [];
+    if(page=="part1.html"){
+        thisList = pages[0];
+    } else if(page=="part2.html"){
+        thisList = pages[1];
+    }
+    
     $('.nextpage').click(()=>{
-        if(count<=pages.length && !moving){
-            moving = true;
-            var cElem = pages[count];
-            var nElem = pages[count+1];
-            $('.'+cElem).fadeOut(500);
-            $('.'+nElem).fadeIn(700);
-            $('html, body').animate({
-                    scrollTop: 0
-            }, 1000);
-            count++;
-            moving = false;
+        if(count<=thisList.length && !moving){
+            changePage(thisList, count+1);
         }
     });
     $('.prevpage').click(()=>{
         if(count>=0 && !moving){
-            moving = true;
-            var cElem = pages[count];
-            var nElem = pages[count-1];
-            $('.'+cElem).fadeOut(500);
-            $('.'+nElem).fadeIn(700);
-            $('html, body').animate({
-                    scrollTop: 0
-            }, 1000);
-            count--;
-            moving = false;
+            changePage(thisList, count-1);
         }
     });
+    function changePage(arr, next){
+        moving = true;
+        var cElem = arr[count];
+        var nElem = arr[next];
+        $('.'+cElem).fadeOut(500);
+        $('.'+nElem).fadeIn(700);
+        $('html, body').animate({
+                scrollTop: 0
+        }, 1000);
+        moving = false;
+        count = next;
+    }
     // TODO: contents onclick, change count value
     // case switch statements
 
