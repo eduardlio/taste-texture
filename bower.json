@@ -1,0 +1,17 @@
+{
+  "name": "chat",
+  "description": "",
+  "main": "server.js",
+  "authors": [
+    "Edward Liao <liao.edward@gmail.com>"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/eduardlio/taste-texture",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
